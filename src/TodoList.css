@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+body {
+    background-image: url('./assets/Icon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    position: relative;
+    min-height: 200vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 240, 245, 0.6); /* Cor rosa claro com opacidade */
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1 {
+    font-weight: 500;
+    color: #d47fa6; /* Rosa pastel */
+    text-align: center;
+}
+
+form {
+    display: flex;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 60px;    
+    margin: 30px auto;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(212, 127, 166, 0.2); /* Sombra leve */
+}
+
+input {
+    width: 100%;
+    height: 60px;
+    background: #ffe6f0; /* Rosa bem claro */
+    border: none;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 30px 0 0 30px;
+    color: #333;
+}
+
+button.add {
+    background: #ff99cc; /* Rosa pastel */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 61px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: background 0.3s;
+}
+
+button.add:hover {
+    background: #ff66b2; /* Rosa mais suave ao passar o mouse */
+}
+
+.listaTarefas {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ff99cc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.item:hover {
+    background: #ffe6f0; /* Levemente colorido ao passar o mouse */
+}
+
+.item span {
+    color: #4a4a4a;
+}
+
+.item.completo {
+    background: #ffe6f0;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer; 
+    opacity: 0.7;
+}
+
+button.del {
+    border: none;
+    background: none;
+    color: #ff99cc;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.del:hover {
+    background: #ff99cc;
+    color: white;
+}
+
+button.deleteAll {
+    border: 1px solid #ff66b2;
+    background: none;
+    padding: 15px;
+    color: #ff66b2;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s;
+}
+
+button.deleteAll:hover {    
+    background: #ff66b2;
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    form, .listaTarefas {
+        width: 100%;
+    }
+}
